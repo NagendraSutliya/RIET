@@ -1,0 +1,97 @@
+{
+  "index": {
+    "title": "Home",
+    "headline": "Building Engineers. Creating Tomorrow.",
+    "desc": "Quality education, practical learning and a better future."
+  },
+  "about": {
+    "title": "About RIET",
+    "headline": "A campus built around opportunity.",
+    "desc": "Discover the people, purpose and learning environment behind RIET Jaipur."
+  },
+  "leadership": {
+    "title": "Leadership",
+    "headline": "Guidance that shapes ambition.",
+    "desc": "Meet the leadership and academic teams."
+  },
+  "approvals": {
+    "title": "Approvals & Affiliations",
+    "headline": "Trust, transparency and academic standards.",
+    "desc": "Access current institutional approvals and public documents."
+  },
+  "academics": {
+    "title": "Academics",
+    "headline": "Learn deeply. Apply confidently.",
+    "desc": "Explore programmes, departments and academic resources."
+  },
+  "departments": {
+    "title": "Departments",
+    "headline": "Find your field. Build your future.",
+    "desc": "Explore engineering, computing and management departments."
+  },
+  "department-detail": {
+    "title": "Computer Science & Engineering",
+    "headline": "Ideas become intelligent solutions.",
+    "desc": "Explore academic focus, laboratories, faculty and projects."
+  },
+  "admissions": {
+    "title": "Admissions",
+    "headline": "Your next chapter starts here.",
+    "desc": "Understand the admission journey and connect with the admissions team."
+  },
+  "fees-scholarships": {
+    "title": "Fees & Scholarships",
+    "headline": "Make an informed investment.",
+    "desc": "Review fee information and scholarship opportunities."
+  },
+  "placements": {
+    "title": "Placements",
+    "headline": "Prepare for the world of work.",
+    "desc": "Discover career development, placement preparation and recruiter engagement."
+  },
+  "campus-life": {
+    "title": "Campus Life",
+    "headline": "More than a classroom.",
+    "desc": "Experience clubs, celebrations, sports and campus moments."
+  },
+  "facilities": {
+    "title": "Campus Facilities",
+    "headline": "Spaces designed for learning.",
+    "desc": "Explore laboratories, library, sports and student facilities."
+  },
+  "research-innovation": {
+    "title": "Research & Innovation",
+    "headline": "Question boldly. Create what's next.",
+    "desc": "Explore research, faculty interests and student innovation."
+  },
+  "incubation": {
+    "title": "Incubation Centre",
+    "headline": "Turn ideas into real-world impact.",
+    "desc": "Explore mentoring, prototyping and entrepreneurial development."
+  },
+  "news-events": {
+    "title": "News & Events",
+    "headline": "What's happening at RIET.",
+    "desc": "Campus announcements, workshops, seminars and celebrations."
+  },
+  "gallery": {
+    "title": "Photo Gallery",
+    "headline": "A glimpse of life at RIET.",
+    "desc": "Explore campus spaces, student activities and events."
+  },
+  "student-corner": {
+    "title": "Student Corner",
+    "headline": "Everything students need, in one place.",
+    "desc": "Notices, academic calendars, results, downloads and support."
+  },
+  "mandatory-disclosure": {
+    "title": "Mandatory Disclosure",
+    "headline": "Institutional information, clearly presented.",
+    "desc": "Find disclosures, policies, committee details and approvals."
+  },
+  "contact": {
+    "title": "Contact",
+    "headline": "Let's start a conversation.",
+    "desc": "Reach RIET for admissions, enquiries and collaborations."
+  }
+}
