@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Home, Trophy, BookOpen, Coffee, Wifi, Bus, Sparkles, ZoomIn, Users, CheckCircle2, X, Compass, ChevronRight } from 'lucide-react';
-import { campusLifePhotos, busRoutes, studentClubs } from '../../data/collegeData';
-import PhotoLightboxModal from '../../components/PhotoLightboxModal';
+import { campusLifePhotos, busRoutes, studentClubs } from '../../../data/collegeData';
+import PhotoLightboxModal from '../../../components/PhotoLightboxModal';
 
 export default function Template1CampusLife({ onOpenEnquiry }) {
   const [selectedPhotoIndex, setSelectedPhotoIndex] = useState(null);

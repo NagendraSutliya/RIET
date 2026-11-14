@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Briefcase, TrendingUp, Award, Building, CheckCircle2, ArrowRight, Search, Download, Users, Mail, X } from 'lucide-react';
-import { recruitersList, studentTestimonials } from '../../data/collegeData';
+import { recruitersList, studentTestimonials } from '../../../data/collegeData';
 
 export default function Template1Placements({ onOpenEnquiry, onOpenDocument }) {
   const [selectedSector, setSelectedSector] = useState('All');

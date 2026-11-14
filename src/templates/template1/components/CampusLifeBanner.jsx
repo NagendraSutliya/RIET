@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Sparkles } from 'lucide-react';
-import { campusLifePhotos } from '../../data/collegeData';
+import { campusLifePhotos } from '../../../data/collegeData';
 
 export default function CampusLifeBanner() {
   return (

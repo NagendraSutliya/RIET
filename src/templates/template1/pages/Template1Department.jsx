@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Cpu, Award, BookOpen, Layers, Users, ShieldCheck, ArrowRight, CheckCircle2, Search, Download, Sparkles, School, ChevronDown, ChevronUp } from 'lucide-react';
-import { departmentData } from '../../data/collegeData';
+import { departmentData } from '../../../data/collegeData';
 
 export default function Template1Department({ onOpenEnquiry, onOpenDocument }) {
   const { deptId } = useParams();

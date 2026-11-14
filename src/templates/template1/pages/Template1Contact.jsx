@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { MapPin, Phone, Mail, Send, Clock, CheckCircle2, Facebook, Twitter, Linkedin, Instagram, Youtube, Compass, ShieldAlert, PhoneCall, Building } from 'lucide-react';
-import { collegeInfo } from '../../data/collegeData';
+import { collegeInfo } from '../../../data/collegeData';
 
 export default function Template1Contact() {
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', department: 'Admissions Inquiry', message: '' });

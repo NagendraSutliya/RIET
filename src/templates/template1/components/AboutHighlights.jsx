@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, GraduationCap, Settings, Trophy, ShieldCheck } from 'lucide-react';
-import { collegeInfo } from '../../data/collegeData';
+import { collegeInfo } from '../../../data/collegeData';
 
 export default function AboutHighlights() {
   const highlights = [

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { CheckCircle2, ArrowRight, HelpCircle, FileText, ChevronDown, Send, Calculator, Sparkles, CheckSquare, Square, PhoneCall, Award } from 'lucide-react';
-import { collegeInfo } from '../../data/collegeData';
+import { collegeInfo } from '../../../data/collegeData';
 
 export default function Template1Admissions({ onOpenEnquiry }) {
   // Calculator State

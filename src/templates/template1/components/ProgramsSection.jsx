@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, BookOpen, Clock, ChevronRight } from 'lucide-react';
-import { programs } from '../../data/collegeData';
+import { programs } from '../../../data/collegeData';
 
 export default function ProgramsSection() {
   return (

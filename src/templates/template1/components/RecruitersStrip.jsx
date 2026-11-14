@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Briefcase } from 'lucide-react';
-import { recruitersList } from '../../data/collegeData';
+import { recruitersList } from '../../../data/collegeData';
 
 export default function RecruitersStrip() {
   return (

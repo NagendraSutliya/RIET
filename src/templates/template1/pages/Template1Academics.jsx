@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, BookOpen, GraduationCap, Download, CheckCircle, FileText, Search, ExternalLink } from 'lucide-react';
-import { programs } from '../../data/collegeData';
+import { programs } from '../../../data/collegeData';
 
 export default function Template1Academics({ onOpenEnquiry, onOpenDocument }) {
   const [selectedFilter, setSelectedFilter] = useState('All');

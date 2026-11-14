@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Lightbulb, Rocket, Cpu, Award, CheckCircle2, ArrowRight, ShieldCheck, DollarSign, Send, X } from 'lucide-react';
-import { startupsList } from '../../data/collegeData';
+import { startupsList } from '../../../data/collegeData';
 
 export default function Template1Research({ onOpenEnquiry, onOpenDocument }) {
   const [selectedFilter, setSelectedFilter] = useState('All');

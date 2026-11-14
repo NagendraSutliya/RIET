@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Calendar, Quote, ChevronLeft, ChevronRight, Award } from 'lucide-react';
-import { latestNews, studentTestimonials } from '../../data/collegeData';
+import { latestNews, studentTestimonials } from '../../../data/collegeData';
 
 export default function NewsTestimonials() {
   const [activeTestimonial, setActiveTestimonial] = useState(0);

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Calendar, Tag, ArrowRight, Bell, Download, Search, CheckCircle2, X } from 'lucide-react';
-import { latestNews } from '../../data/collegeData';
+import { latestNews } from '../../../data/collegeData';
 
 export default function Template1NewsEvents({ onOpenEnquiry, onOpenDocument }) {
   const [activeTab, setActiveTab] = useState('All');

@@ -1,10 +1,10 @@
 import React from 'react';
-import HeroSection from './HeroSection';
-import AboutHighlights from './AboutHighlights';
-import ProgramsSection from './ProgramsSection';
-import CampusLifeBanner from './CampusLifeBanner';
-import NewsTestimonials from './NewsTestimonials';
-import RecruitersStrip from './RecruitersStrip';
+import HeroSection from '../components/HeroSection';
+import AboutHighlights from '../components/AboutHighlights';
+import ProgramsSection from '../components/ProgramsSection';
+import CampusLifeBanner from '../components/CampusLifeBanner';
+import NewsTestimonials from '../components/NewsTestimonials';
+import RecruitersStrip from '../components/RecruitersStrip';
 
 export default function Template1Home({ onOpenEnquiry }) {
   return (

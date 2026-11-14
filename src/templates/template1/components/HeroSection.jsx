@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, ChevronLeft, ChevronRight, CheckCircle2 } from 'lucide-react';
-import { collegeInfo } from '../../data/collegeData';
+import { collegeInfo } from '../../../data/collegeData';
 
 export default function HeroSection({ onOpenEnquiry }) {
   const slides = [

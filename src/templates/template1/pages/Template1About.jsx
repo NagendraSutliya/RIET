@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Shield, Target, Compass, Award, CheckCircle2, Users, Building2, FileCheck, Lock, Globe } from 'lucide-react';
-import { collegeInfo } from '../../data/collegeData';
+import { collegeInfo } from '../../../data/collegeData';
 
 export default function Template1About({ onOpenEnquiry, onOpenDocument }) {
   const [activeTab, setActiveTab] = useState('overview');
