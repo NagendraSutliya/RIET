@@ -6,17 +6,19 @@ export default function TemplateSwitcher({ activeTemplate, onSelectTemplate, onO
     { id: 'template1', name: 'T1: Official Portal', badge: 'Active' },
     { id: 'template2', name: 'T2: Clean Minimal', badge: 'Minimal' },
     { id: 'template3', name: 'T3: Corporate Grid', badge: 'Grid' },
-    { id: 'template4', name: 'T4: Tech Campus', badge: 'Tech' },
+    { id: 'template4', name: 'T4: Crimson Sidebar', badge: 'Sidebar' },
     { id: 'template5', name: 'T5: Vibrant Univ', badge: 'Vibrant' },
     { id: 'template6', name: 'T6: Elegant Acad', badge: 'Classic' },
     { id: 'template7', name: 'T7: Modern Portal', badge: 'Portal' },
+    { id: 'template8', name: 'T8: Kingster Univ', badge: 'Kingster' },
+    { id: 'template9', name: 'T9: Template 9', badge: 'New' },
   ];
 
   return (
-    <div className="bg-slate-900 text-white text-xs py-1.5 px-3 sm:px-4 border-b border-slate-800 sticky top-0 z-50 shadow-md">
+    <div className="bg-slate-900 text-white text-xs py-1.5 px-3 sm:px-4 border-b border-slate-800 sticky top-0 z-50 shadow-md w-full max-w-full overflow-hidden">
       <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
         {/* Left: Template Switcher Title & Tabs */}
-        <div className="flex items-center gap-2 overflow-x-auto max-w-full py-0.5 no-scrollbar">
+        <div className="flex items-center gap-1.5 overflow-x-auto max-w-full py-0.5 no-scrollbar min-w-0 flex-1">
           <div className="flex items-center gap-1 font-bold text-slate-300 shrink-0 uppercase tracking-wider text-[10px] sm:text-[11px] mr-1">
             <Layout className="w-3.5 h-3.5 text-riet-gold" />
             <span className="hidden sm:inline">Templates:</span>
@@ -41,21 +43,6 @@ export default function TemplateSwitcher({ activeTemplate, onSelectTemplate, onO
           </div>
         </div>
 
-        {/* Right: Quick actions */}
-        <div className="flex items-center gap-2 sm:gap-3 ml-auto shrink-0">
-          <div className="hidden lg:flex items-center text-slate-400 text-[11px] gap-1">
-            <Sparkles className="w-3 h-3 text-amber-400" />
-            <span>Multi-Template Architecture</span>
-          </div>
-
-          <button
-            onClick={onOpenEnquiry}
-            className="bg-riet-gold hover:bg-riet-gold-hover text-riet-navy font-bold px-2.5 py-1 rounded-md text-xs transition-colors flex items-center gap-1 shadow-xs"
-          >
-            <span>Enquire</span>
-            <span className="text-xs">↗</span>
-          </button>
-        </div>
       </div>
     </div>
   );

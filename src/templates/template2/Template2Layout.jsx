@@ -29,7 +29,7 @@ import Template2Contact from './pages/Template2Contact';
 
 export default function Template2Layout({ onOpenEnquiry, onOpenDocument }) {
   return (
-    <div className="min-h-screen flex flex-col bg-white text-slate-800 font-sans selection:bg-[#28679e] selection:text-white">
+    <div className="min-h-screen flex flex-col bg-white text-slate-800 font-sans selection:bg-[#28679e] selection:text-white w-full max-w-full overflow-x-hidden">
       {/* 1. Template 2 Top Utility Strip */}
       <Template2TopBar />
 
@@ -37,7 +37,7 @@ export default function Template2Layout({ onOpenEnquiry, onOpenDocument }) {
       <Template2Header onOpenEnquiry={onOpenEnquiry} />
 
       {/* 3. Main Routing Body */}
-      <main className="flex-1">
+      <main className="flex-1 w-full max-w-full overflow-x-hidden">
         <Routes>
           <Route path="/" element={<Template2Home onOpenEnquiry={onOpenEnquiry} />} />
           <Route path="/about" element={<Template2About onOpenEnquiry={onOpenEnquiry} />} />

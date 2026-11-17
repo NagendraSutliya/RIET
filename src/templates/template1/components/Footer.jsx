@@ -66,7 +66,7 @@ export default function Footer({ onOpenEnquiry, onOpenDocument }) {
           <div className="lg:col-span-1 space-y-4">
             <div className="flex items-center gap-3">
               <img
-                src="/riet-logo.jpg"
+                src="/riet-emblem.png"
                 alt="RIET Jaipur Official Seal"
                 className="w-12 h-12 rounded-full object-contain bg-white p-0.5 shadow-md border border-slate-300 shrink-0"
               />

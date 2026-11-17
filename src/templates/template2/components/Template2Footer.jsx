@@ -11,9 +11,11 @@ export default function Template2Footer({ onOpenEnquiry }) {
           {/* Col 1: Brand & Overview */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full border border-[#e6ad3d] bg-[#fff8e8] flex items-center justify-center text-[#102b50] font-black text-lg">
-                R
-              </div>
+              <img
+                src="/riet-emblem.png"
+                alt="RIET Jaipur"
+                className="w-10 h-10 object-contain rounded-full bg-white p-0.5 shadow-sm"
+              />
               <div>
                 <h4 className="font-heading font-black text-white text-base tracking-tight">RIET JAIPUR</h4>
                 <p className="text-[10px] text-[#8fa2b7] font-semibold uppercase tracking-wider">Est. 2000 • AICTE Approved</p>

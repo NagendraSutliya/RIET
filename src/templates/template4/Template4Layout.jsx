@@ -1,33 +1,52 @@
 import React from 'react';
+import { Routes, Route, Navigate } from 'react-router-dom';
 
-export default function Template4Layout({ onOpenEnquiry }) {
+// Template 4 Components
+import Template4Sidebar from './components/Template4Sidebar';
+import Template4Footer from './components/Template4Footer';
+
+// Template 4 Pages
+import Template4Home from './pages/Template4Home';
+import Template4About from './pages/Template4About';
+import Template4Academics from './pages/Template4Academics';
+import Template4Admissions from './pages/Template4Admissions';
+import Template4Courses from './pages/Template4Courses';
+import Template4Departments from './pages/Template4Departments';
+import Template4DepartmentDetail from './pages/Template4DepartmentDetail';
+import Template4Placements from './pages/Template4Placements';
+import Template4Campus from './pages/Template4Campus';
+import Template4News from './pages/Template4News';
+import Template4Contact from './pages/Template4Contact';
+
+export default function Template4Layout({ onOpenEnquiry, onOpenDocument }) {
   return (
-    <div className="min-h-screen flex flex-col bg-slate-50 text-slate-800 font-sans">
-      <header className="bg-emerald-950 text-white border-b border-emerald-900 sticky top-0 z-30">
-        <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <span className="font-extrabold text-white tracking-tight text-lg">RIET JAIPUR</span>
-            <span className="text-[10px] uppercase tracking-wider text-emerald-300 font-semibold">• Template 4 (Tech Campus)</span>
-          </div>
-          <button onClick={onOpenEnquiry} className="bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold px-4 py-2 rounded-lg text-xs">
-            Enquire
-          </button>
-        </div>
-      </header>
-      <main className="flex-1 flex items-center justify-center p-8">
-        <div className="max-w-xl text-center space-y-4 bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
-          <span className="inline-block px-3 py-1 bg-emerald-100 text-emerald-800 text-xs font-semibold rounded-full">
-            Isolated Template Directory
-          </span>
-          <h2 className="text-2xl font-bold text-slate-900">Template 4: Tech Campus</h2>
-          <p className="text-sm text-slate-600">
-            Dedicated folder: <code className="bg-slate-100 px-1 py-0.5 rounded text-xs font-mono">src/templates/template4/</code>
-          </p>
-        </div>
-      </main>
-      <footer className="bg-emerald-950 text-emerald-400 py-6 text-center text-xs">
-        <p>© 2026 RIET Jaipur. Template 4 Layout.</p>
-      </footer>
+    <div className="min-h-screen flex flex-col lg:flex-row bg-[#F6F3F4] text-[#1C1B22] font-manrope w-full max-w-full overflow-x-hidden selection:bg-[#B3263A] selection:text-white">
+      {/* 1. Left Sidebar Navigation (Desktop) & Top Header (Mobile) */}
+      <Template4Sidebar onOpenEnquiry={onOpenEnquiry} />
+
+      {/* 2. Main Content Column */}
+      <div className="flex-1 flex flex-col min-w-0 w-full overflow-x-hidden">
+        <main className="flex-1 w-full max-w-full overflow-x-hidden bg-white">
+          <Routes>
+            <Route path="/" element={<Template4Home onOpenEnquiry={onOpenEnquiry} />} />
+            <Route path="/about" element={<Template4About onOpenEnquiry={onOpenEnquiry} />} />
+            <Route path="/academics" element={<Template4Academics onOpenEnquiry={onOpenEnquiry} />} />
+            <Route path="/admissions" element={<Template4Admissions onOpenEnquiry={onOpenEnquiry} />} />
+            <Route path="/courses" element={<Template4Courses onOpenEnquiry={onOpenEnquiry} />} />
+            <Route path="/departments" element={<Template4Departments onOpenEnquiry={onOpenEnquiry} />} />
+            <Route path="/department-detail" element={<Template4DepartmentDetail onOpenEnquiry={onOpenEnquiry} />} />
+            <Route path="/departments/:deptId" element={<Template4DepartmentDetail onOpenEnquiry={onOpenEnquiry} />} />
+            <Route path="/placements" element={<Template4Placements onOpenEnquiry={onOpenEnquiry} />} />
+            <Route path="/campus" element={<Template4Campus onOpenEnquiry={onOpenEnquiry} />} />
+            <Route path="/news" element={<Template4News onOpenEnquiry={onOpenEnquiry} />} />
+            <Route path="/contact" element={<Template4Contact onOpenEnquiry={onOpenEnquiry} />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
+          </Routes>
+        </main>
+
+        {/* 3. Footer */}
+        <Template4Footer onOpenEnquiry={onOpenEnquiry} />
+      </div>
     </div>
   );
 }

@@ -1,33 +1,54 @@
 import React from 'react';
+import { Routes, Route, Navigate } from 'react-router-dom';
 
-export default function Template5Layout({ onOpenEnquiry }) {
+// Template 5 Components
+import Template5TopBar from './components/Template5TopBar';
+import Template5Header from './components/Template5Header';
+import Template5Footer from './components/Template5Footer';
+
+// Template 5 Pages
+import Template5Home from './pages/Template5Home';
+import Template5About from './pages/Template5About';
+import Template5Academics from './pages/Template5Academics';
+import Template5Admissions from './pages/Template5Admissions';
+import Template5Courses from './pages/Template5Courses';
+import Template5Departments from './pages/Template5Departments';
+import Template5DepartmentDetail from './pages/Template5DepartmentDetail';
+import Template5Placements from './pages/Template5Placements';
+import Template5Campus from './pages/Template5Campus';
+import Template5News from './pages/Template5News';
+import Template5Contact from './pages/Template5Contact';
+
+export default function Template5Layout({ onOpenEnquiry, onOpenDocument }) {
   return (
-    <div className="min-h-screen flex flex-col bg-slate-50 text-slate-800 font-sans">
-      <header className="bg-indigo-950 text-white border-b border-indigo-900 sticky top-0 z-30">
-        <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <span className="font-extrabold text-white tracking-tight text-lg">RIET JAIPUR</span>
-            <span className="text-[10px] uppercase tracking-wider text-indigo-300 font-semibold">• Template 5 (Vibrant University)</span>
-          </div>
-          <button onClick={onOpenEnquiry} className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold px-4 py-2 rounded-lg text-xs">
-            Enquire
-          </button>
-        </div>
-      </header>
-      <main className="flex-1 flex items-center justify-center p-8">
-        <div className="max-w-xl text-center space-y-4 bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
-          <span className="inline-block px-3 py-1 bg-indigo-100 text-indigo-800 text-xs font-semibold rounded-full">
-            Isolated Template Directory
-          </span>
-          <h2 className="text-2xl font-bold text-slate-900">Template 5: Vibrant University</h2>
-          <p className="text-sm text-slate-600">
-            Dedicated folder: <code className="bg-slate-100 px-1 py-0.5 rounded text-xs font-mono">src/templates/template5/</code>
-          </p>
-        </div>
+    <div className="min-h-screen flex flex-col bg-white text-[#16262B] font-sans selection:bg-[#F58B3A] selection:text-[#0A3340] w-full max-w-full overflow-x-hidden">
+      {/* 1. Top Utility Bar */}
+      <Template5TopBar />
+
+      {/* 2. Sticky Header with Centered Brand and Pill Navigation */}
+      <Template5Header onOpenEnquiry={onOpenEnquiry} />
+
+      {/* 3. Main Route Body */}
+      <main className="flex-1 w-full max-w-full overflow-x-hidden">
+        <Routes>
+          <Route path="/" element={<Template5Home onOpenEnquiry={onOpenEnquiry} />} />
+          <Route path="/about" element={<Template5About onOpenEnquiry={onOpenEnquiry} />} />
+          <Route path="/academics" element={<Template5Academics onOpenEnquiry={onOpenEnquiry} />} />
+          <Route path="/admissions" element={<Template5Admissions onOpenEnquiry={onOpenEnquiry} />} />
+          <Route path="/courses" element={<Template5Courses onOpenEnquiry={onOpenEnquiry} />} />
+          <Route path="/departments" element={<Template5Departments onOpenEnquiry={onOpenEnquiry} />} />
+          <Route path="/department-detail" element={<Template5DepartmentDetail onOpenEnquiry={onOpenEnquiry} />} />
+          <Route path="/departments/:deptId" element={<Template5DepartmentDetail onOpenEnquiry={onOpenEnquiry} />} />
+          <Route path="/placements" element={<Template5Placements onOpenEnquiry={onOpenEnquiry} />} />
+          <Route path="/campus" element={<Template5Campus onOpenEnquiry={onOpenEnquiry} />} />
+          <Route path="/news" element={<Template5News onOpenEnquiry={onOpenEnquiry} />} />
+          <Route path="/contact" element={<Template5Contact onOpenEnquiry={onOpenEnquiry} />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
       </main>
-      <footer className="bg-indigo-950 text-indigo-400 py-6 text-center text-xs">
-        <p>© 2026 RIET Jaipur. Template 5 Layout.</p>
-      </footer>
+
+      {/* 4. Deep Teal Footer */}
+      <Template5Footer onOpenEnquiry={onOpenEnquiry} />
     </div>
   );
 }

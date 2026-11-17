@@ -1,33 +1,54 @@
 import React from 'react';
+import { Routes, Route, Navigate } from 'react-router-dom';
 
-export default function Template6Layout({ onOpenEnquiry }) {
+// Template 6 Components
+import Template6TopBar from './components/Template6TopBar';
+import Template6Header from './components/Template6Header';
+import Template6Footer from './components/Template6Footer';
+
+// Template 6 Pages
+import Template6Home from './pages/Template6Home';
+import Template6About from './pages/Template6About';
+import Template6Academics from './pages/Template6Academics';
+import Template6Admissions from './pages/Template6Admissions';
+import Template6Courses from './pages/Template6Courses';
+import Template6Departments from './pages/Template6Departments';
+import Template6DepartmentDetail from './pages/Template6DepartmentDetail';
+import Template6Placements from './pages/Template6Placements';
+import Template6Campus from './pages/Template6Campus';
+import Template6News from './pages/Template6News';
+import Template6Contact from './pages/Template6Contact';
+
+export default function Template6Layout({ onOpenEnquiry, onOpenDocument }) {
   return (
-    <div className="min-h-screen flex flex-col bg-slate-50 text-slate-800 font-sans">
-      <header className="bg-rose-950 text-white border-b border-rose-900 sticky top-0 z-30">
-        <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <span className="font-extrabold text-white tracking-tight text-lg">RIET JAIPUR</span>
-            <span className="text-[10px] uppercase tracking-wider text-rose-300 font-semibold">• Template 6 (Elegant Academic)</span>
-          </div>
-          <button onClick={onOpenEnquiry} className="bg-rose-500 hover:bg-rose-600 text-white font-bold px-4 py-2 rounded-lg text-xs">
-            Enquire
-          </button>
-        </div>
-      </header>
-      <main className="flex-1 flex items-center justify-center p-8">
-        <div className="max-w-xl text-center space-y-4 bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
-          <span className="inline-block px-3 py-1 bg-rose-100 text-rose-800 text-xs font-semibold rounded-full">
-            Isolated Template Directory
-          </span>
-          <h2 className="text-2xl font-bold text-slate-900">Template 6: Elegant Academic</h2>
-          <p className="text-sm text-slate-600">
-            Dedicated folder: <code className="bg-slate-100 px-1 py-0.5 rounded text-xs font-mono">src/templates/template6/</code>
-          </p>
-        </div>
+    <div className="min-h-screen flex flex-col bg-white text-[#1C1B22] font-sans selection:bg-[#6B1724] selection:text-white w-full max-w-full overflow-x-hidden">
+      {/* 1. Top Utility Bar */}
+      <Template6TopBar />
+
+      {/* 2. Classic University Header & Navigation */}
+      <Template6Header onOpenEnquiry={onOpenEnquiry} />
+
+      {/* 3. Main Routes */}
+      <main className="flex-1 w-full max-w-full overflow-x-hidden">
+        <Routes>
+          <Route path="/" element={<Template6Home onOpenEnquiry={onOpenEnquiry} />} />
+          <Route path="/about" element={<Template6About onOpenEnquiry={onOpenEnquiry} />} />
+          <Route path="/academics" element={<Template6Academics onOpenEnquiry={onOpenEnquiry} />} />
+          <Route path="/admissions" element={<Template6Admissions onOpenEnquiry={onOpenEnquiry} />} />
+          <Route path="/courses" element={<Template6Courses onOpenEnquiry={onOpenEnquiry} />} />
+          <Route path="/departments" element={<Template6Departments onOpenEnquiry={onOpenEnquiry} />} />
+          <Route path="/department-detail" element={<Template6DepartmentDetail onOpenEnquiry={onOpenEnquiry} />} />
+          <Route path="/departments/:deptId" element={<Template6DepartmentDetail onOpenEnquiry={onOpenEnquiry} />} />
+          <Route path="/placements" element={<Template6Placements onOpenEnquiry={onOpenEnquiry} />} />
+          <Route path="/campus" element={<Template6Campus onOpenEnquiry={onOpenEnquiry} />} />
+          <Route path="/news" element={<Template6News onOpenEnquiry={onOpenEnquiry} />} />
+          <Route path="/contact" element={<Template6Contact onOpenEnquiry={onOpenEnquiry} />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
       </main>
-      <footer className="bg-rose-950 text-rose-400 py-6 text-center text-xs">
-        <p>© 2026 RIET Jaipur. Template 6 Layout.</p>
-      </footer>
+
+      {/* 4. Elegant Footer */}
+      <Template6Footer onOpenEnquiry={onOpenEnquiry} />
     </div>
   );
 }

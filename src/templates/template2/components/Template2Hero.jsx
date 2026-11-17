@@ -11,7 +11,7 @@ export default function Template2Hero({
   secondaryAction = { label: 'Talk to RIET', path: '/contact' }
 }) {
   return (
-    <section className="relative bg-[#081f3b] text-white py-14 sm:py-20 overflow-hidden border-b border-[#122e54]">
+    <section className="relative bg-[#081f3b] text-white py-14 sm:py-20 overflow-hidden border-b border-[#122e54] w-full max-w-full">
       {/* Background overlay with subtle tech accent */}
       <div 
         className="absolute inset-0 bg-cover bg-center opacity-20 mix-blend-overlay"

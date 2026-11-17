@@ -66,9 +66,9 @@ export default function Template2Home({ onOpenEnquiry }) {
   ];
 
   return (
-    <div className="bg-white text-slate-800">
+    <div className="bg-white text-slate-800 w-full max-w-full overflow-x-hidden">
       {/* 1. Hero Section (Clean Minimal Headline + Action CTA) */}
-      <section className="relative bg-[#071b34] text-white py-20 sm:py-28 overflow-hidden">
+      <section className="relative bg-[#071b34] text-white py-20 sm:py-28 overflow-hidden w-full max-w-full">
         {/* Background photo with clean dark gradient */}
         <div 
           className="absolute inset-0 bg-cover bg-center opacity-25 mix-blend-overlay"
@@ -111,7 +111,7 @@ export default function Template2Home({ onOpenEnquiry }) {
       </section>
 
       {/* 2. Key Stats Strip */}
-      <section className="bg-[#102b50] text-white py-7 border-y border-[#1a3f70]">
+      <section className="bg-[#102b50] text-white py-7 border-y border-[#1a3f70] w-full max-w-full overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div className="border-r last:border-none border-white/10">
@@ -135,7 +135,7 @@ export default function Template2Home({ onOpenEnquiry }) {
       </section>
 
       {/* 3. Welcome to RIET Split Section */}
-      <section className="py-16 sm:py-20 bg-white">
+      <section className="py-16 sm:py-20 bg-white w-full max-w-full overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative rounded-2xl overflow-hidden shadow-lg border border-[#e5eaf0] group">

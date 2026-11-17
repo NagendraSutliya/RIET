@@ -11,7 +11,7 @@ export default function Template2CtaBanner({
   onOpenEnquiry
 }) {
   return (
-    <section className="py-12 sm:py-16 bg-white">
+    <section className="py-12 sm:py-16 bg-white w-full max-w-full overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="bg-gradient-to-r from-[#102b50] via-[#163b6b] to-[#1d4e7c] text-white rounded-2xl p-8 sm:p-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-8 shadow-xl relative overflow-hidden">
           {/* Subtle background glow */}

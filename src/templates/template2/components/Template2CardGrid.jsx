@@ -22,7 +22,7 @@ export default function Template2CardGrid({
   columns = 3
 }) {
   return (
-    <section className={`py-16 sm:py-20 ${softBackground ? 'bg-[#f4f7fa]' : 'bg-white'}`}>
+    <section className={`py-16 sm:py-20 w-full max-w-full overflow-hidden ${softBackground ? 'bg-[#f4f7fa]' : 'bg-white'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Header */}
         {(title || subtitle) && (
@@ -46,7 +46,7 @@ export default function Template2CardGrid({
         )}
 
         {/* Card Grid */}
-        <div className={`grid grid-cols-1 sm:grid-cols-2 ${columns === 4 ? 'lg:grid-cols-4' : 'lg:grid-cols-3'} gap-6`}>
+        <div className={`grid grid-cols-1 sm:grid-cols-2 ${columns === 4 ? 'lg:grid-cols-2 xl:grid-cols-4' : 'lg:grid-cols-3'} gap-6`}>
           {items.map((item, idx) => {
             const cardTitle = Array.isArray(item) ? item[0] : item.title;
             const cardDesc = Array.isArray(item) ? item[1] : item.desc;

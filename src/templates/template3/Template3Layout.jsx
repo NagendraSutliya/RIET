@@ -1,33 +1,54 @@
 import React from 'react';
+import { Routes, Route, Navigate } from 'react-router-dom';
 
-export default function Template3Layout({ onOpenEnquiry }) {
+// Template 3 Layout Components
+import Template3TopBar from './components/Template3TopBar';
+import Template3Header from './components/Template3Header';
+import Template3Footer from './components/Template3Footer';
+
+// Template 3 Pages
+import Template3Home from './pages/Template3Home';
+import Template3About from './pages/Template3About';
+import Template3Academics from './pages/Template3Academics';
+import Template3Admissions from './pages/Template3Admissions';
+import Template3Courses from './pages/Template3Courses';
+import Template3Departments from './pages/Template3Departments';
+import Template3DepartmentDetail from './pages/Template3DepartmentDetail';
+import Template3Placements from './pages/Template3Placements';
+import Template3Campus from './pages/Template3Campus';
+import Template3News from './pages/Template3News';
+import Template3Contact from './pages/Template3Contact';
+
+export default function Template3Layout({ onOpenEnquiry, onOpenDocument }) {
   return (
-    <div className="min-h-screen flex flex-col bg-slate-50 text-slate-800 font-sans">
-      <header className="bg-slate-900 text-white border-b border-slate-800 sticky top-0 z-30">
-        <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <span className="font-extrabold text-white tracking-tight text-lg">RIET JAIPUR</span>
-            <span className="text-[10px] uppercase tracking-wider text-slate-400 font-semibold">• Template 3 (Corporate Grid)</span>
-          </div>
-          <button onClick={onOpenEnquiry} className="bg-blue-600 hover:bg-blue-700 text-white font-bold px-4 py-2 rounded-lg text-xs">
-            Enquire
-          </button>
-        </div>
-      </header>
-      <main className="flex-1 flex items-center justify-center p-8">
-        <div className="max-w-xl text-center space-y-4 bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
-          <span className="inline-block px-3 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded-full">
-            Isolated Template Directory
-          </span>
-          <h2 className="text-2xl font-bold text-slate-900">Template 3: Corporate Grid</h2>
-          <p className="text-sm text-slate-600">
-            Dedicated folder: <code className="bg-slate-100 px-1 py-0.5 rounded text-xs font-mono">src/templates/template3/</code>
-          </p>
-        </div>
+    <div className="min-h-screen flex flex-col bg-white text-[#1A2233] font-sans selection:bg-[#F2A900] selection:text-[#0E2A5C] w-full max-w-full overflow-x-hidden">
+      {/* 1. Template 3 Top Utility Bar */}
+      <Template3TopBar />
+
+      {/* 2. Template 3 Header & Navigation */}
+      <Template3Header onOpenEnquiry={onOpenEnquiry} />
+
+      {/* 3. Main Routing Body */}
+      <main className="flex-1 w-full max-w-full overflow-x-hidden">
+        <Routes>
+          <Route path="/" element={<Template3Home onOpenEnquiry={onOpenEnquiry} />} />
+          <Route path="/about" element={<Template3About onOpenEnquiry={onOpenEnquiry} />} />
+          <Route path="/academics" element={<Template3Academics onOpenEnquiry={onOpenEnquiry} />} />
+          <Route path="/admissions" element={<Template3Admissions onOpenEnquiry={onOpenEnquiry} />} />
+          <Route path="/courses" element={<Template3Courses onOpenEnquiry={onOpenEnquiry} />} />
+          <Route path="/departments" element={<Template3Departments onOpenEnquiry={onOpenEnquiry} />} />
+          <Route path="/department-detail" element={<Template3DepartmentDetail onOpenEnquiry={onOpenEnquiry} />} />
+          <Route path="/departments/:deptId" element={<Template3DepartmentDetail onOpenEnquiry={onOpenEnquiry} />} />
+          <Route path="/placements" element={<Template3Placements onOpenEnquiry={onOpenEnquiry} />} />
+          <Route path="/campus" element={<Template3Campus onOpenEnquiry={onOpenEnquiry} />} />
+          <Route path="/news" element={<Template3News onOpenEnquiry={onOpenEnquiry} />} />
+          <Route path="/contact" element={<Template3Contact onOpenEnquiry={onOpenEnquiry} />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
       </main>
-      <footer className="bg-slate-900 text-slate-400 py-6 text-center text-xs">
-        <p>© 2026 RIET Jaipur. Template 3 Layout.</p>
-      </footer>
+
+      {/* 4. Template 3 Footer */}
+      <Template3Footer onOpenEnquiry={onOpenEnquiry} />
     </div>
   );
 }
